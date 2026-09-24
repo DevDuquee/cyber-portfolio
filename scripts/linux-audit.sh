@@ -98,6 +98,12 @@ collect_text() {
         updates=$(apt list --upgradable 2>/dev/null | grep -c upgradable || echo 0)
     fi
     echo "Updates pendentes: $updates"
+    echo ""
+    echo "--- Top 10 processos por CPU ---"
+    ps aux --sort=-%cpu | head -n 11
+    echo ""
+    echo "--- Serviços ativos ---"
+    systemctl list-units --type=service --state=running --no-pager
 }
 
 main() {
