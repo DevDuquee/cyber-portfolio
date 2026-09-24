@@ -103,6 +103,15 @@ collect_text() {
     ps aux --sort=-%cpu | head -n 11
     echo ""
     echo "--- Serviços ativos ---"
+    echo ""
+    echo "--- Interfaces de rede ---"
+    ip -br a
+    echo ""
+    echo "--- Rota padrão ---"
+    ip route | grep default
+    echo ""
+    echo "--- Portas expostas em todas as interfaces ---"
+    ss -tulnp 2>/dev/null | grep -E "0\.0\.0\.0|\[::\]|\*:"
     systemctl list-units --type=service --state=running --no-pager
 }
 
