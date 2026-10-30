@@ -8,8 +8,8 @@ Portfólio técnico demonstrando progressão em fundamentos de redes, Linux e se
 cyber-portfolio/
 ├── scripts/                 # Automações úteis (Bash/Python)
 │   ├── linux-audit.sh       # Coleta info de sistema: processos, portas, usuários, updates
-│   ├── log-analyzer.py      # Parseia auth.log/syslog, alerta via stdout/Telegram
 │   └── recon-automation/    # Recon passivo/ativo (nmap, nuclei, whois, dns)
+├── ssh-log-analyzer/        # Analisa tentativas de login SSH em logs de autenticação
 ├── writeups/                # Análises técnicas de labs/CTFs
 │   ├── thm-linux-fundamentals-1.md
 │   ├── thm-intro-to-lan.md
@@ -31,7 +31,7 @@ cyber-portfolio/
 | Projeto | Descrição | Status | Tecnologias |
 |---------|-----------|--------|-------------|
 | `linux-audit.sh` | Script de auditoria básica de endpoint Linux | ✅ Concluído | Bash, systemd, ss, awk |
-| `log-analyzer.py` | Parser de logs de autenticação com alerta | 🚧 Em andamento | Python, regex, logging |
+| `ssh-log-analyzer/analyzer.py` | Conta tentativas de login SSH malsucedidas por IP e usuário | ✅ Concluído | Python, regex |
 | THM Writeups | Documentação de salas concluídas | ✅ 3/7 | Markdown, screenshots |
 
 ## Habilidades Demonstradas
