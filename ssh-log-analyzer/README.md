@@ -19,4 +19,10 @@ Exemplo em um sistema Debian/Ubuntu:
 python3 analyzer.py /var/log/auth.log
 ```
 
-O script pode precisar de permissões para ler o arquivo. Ele apenas exibe as contagens no terminal; não bloqueia IPs nem altera o sistema.
+O resumo também é salvo em `relatorio_falhas.log` no diretório atual. Para escolher outro caminho:
+
+```bash
+python3 analyzer.py /var/log/auth.log --relatorio /caminho/para/relatorio.log
+```
+
+O script pode precisar de permissões para ler o arquivo. Ele apenas exibe e salva as contagens; não bloqueia IPs nem altera o sistema.
